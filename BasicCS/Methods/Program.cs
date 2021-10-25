@@ -24,6 +24,42 @@ namespace Methods
         }
     }
 
+    class LocalMethod
+    {
+        private int field = 10;
+        public void DoSomething()
+        {
+            int i = 5;
+            void local()
+            {
+                field += i;
+                i = field;
+            }
+            Console.WriteLine(field + i);
+            local();
+            Console.WriteLine(field + i);
+
+        }
+    }
+    struct LocalMethodInStruct
+    {
+        private int field;
+        public void DoSomething()
+        {
+            int i = 5;
+            void local()
+            {
+                /* does not compile
+                field += i;
+                i = field;*/
+            }
+            Console.WriteLine(field + i);
+            local();
+            Console.WriteLine(field + i);
+
+        }
+    }
+
 
     class Program
     {
@@ -66,7 +102,7 @@ namespace Methods
             Person p = new Person("Haim", id: 12, "Jerusalem");
             Console.WriteLine(sub(5, 4));
             Console.WriteLine(sub(b: 4, a: 5));
-            
+
             Console.WriteLine(sum(""));
             Console.WriteLine(sum("", 1, 2));
             Console.WriteLine(sum("", 1, 2, 3, 4, 6, 7, 8, 6));
@@ -83,6 +119,8 @@ namespace Methods
             swap(ref p1, ref p2);
             Console.Write(p1);
             Console.WriteLine(p2);
+
+            new LocalMethod().DoSomething();
 
         }
     }
