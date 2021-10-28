@@ -42,7 +42,8 @@ namespace InitOrder
         static void Main(string[] args)
         {
             new Parent();
-            //new Child();
+            Console.WriteLine("-----------------------");
+            new Child();
         }
     }
 }

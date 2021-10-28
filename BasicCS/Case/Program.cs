@@ -15,9 +15,9 @@ namespace Case
                     Console.WriteLine("negative product");
                     break;
             }
-            Console.WriteLine(a + 2 switch {
+            Console.WriteLine((a + 2) switch {
                 1 => "One", 
-                2 => "Two", 
+                2 when a == 1 => "Two", 
                 > 2 => "Many", 
                 _ => "Non-positive" 
             });

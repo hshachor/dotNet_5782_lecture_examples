@@ -2,17 +2,18 @@
 
 namespace Inheritance
 {
-    //sealed
+    //sealed 
     class Parent 
     {
         public int X;
-        public Parent(/*int x*/) { X = 10; }
+        public Parent(int x) { X = x; }
     }
 
     class Child : Parent
     {
-        //public int X;
-        public Child() { 
+        public int X = 0;
+        public Child() : base(10) 
+        { 
             /*
             Console.WriteLine(X); 
             Console.WriteLine(base.X); 
@@ -31,7 +32,8 @@ namespace Inheritance
             Child c1 = (Child)p;    // ok, explicit cast
             Console.WriteLine(p.GetType());
             if (p is Child) { }
-            Parent p1 = new();
+            Console.WriteLine("Q. p is child?\n A. " + (p is Child));
+            Parent p1 = new(10);
             Console.WriteLine(p1.GetType());
             Child c2 = p1 as Child;  // null!
             Console.WriteLine(c2);
