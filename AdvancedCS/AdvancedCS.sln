@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractClass", "AbstractCl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericProgramming", "GenericProgramming\GenericProgramming.csproj", "{CD4EF59A-B35A-4190-A70E-59F52CDA1391}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterator.csproj", "{0E707287-51B1-41AB-865E-F6AE476FB55D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iterator", "Iterator\Iterator.csproj", "{0E707287-51B1-41AB-865E-F6AE476FB55D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{7E4E0272-376F-4D8D-B80E-CC60918FADAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exceptions", "Exceptions\Exceptions.csproj", "{7E4E0272-376F-4D8D-B80E-CC60918FADAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethod", "ExtensionMethod\ExtensionMethod.csproj", "{EC5F9780-8D14-4681-A4DC-93D0D1838D11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{7E4E0272-376F-4D8D-B80E-CC60918FADAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E4E0272-376F-4D8D-B80E-CC60918FADAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E4E0272-376F-4D8D-B80E-CC60918FADAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5F9780-8D14-4681-A4DC-93D0D1838D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5F9780-8D14-4681-A4DC-93D0D1838D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5F9780-8D14-4681-A4DC-93D0D1838D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5F9780-8D14-4681-A4DC-93D0D1838D11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
