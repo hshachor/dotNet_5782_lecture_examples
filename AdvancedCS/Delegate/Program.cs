@@ -20,7 +20,7 @@ namespace Dlgt
 
     public class MyPrinter
     {
-        public PrintEventHandler PageOver = null;
+        public event PrintEventHandler PageOver = null;
         private int pageCount = 20;
         private void handlePageOver()
         { if (PageOver != null) PageOver(); }
@@ -56,6 +56,12 @@ namespace Dlgt
         {
             Console.WriteLine("missing paper in printer, please refil");
         }
+
+       
+        private void MyPrinter_PageOver()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 
@@ -72,7 +78,8 @@ namespace Dlgt
             MyPrinter printer = new();
             User u1 = new(printer);
             Secretary s = new(printer);
-            printer.Print(25);
+            //printer.PageOver();
+            printer.Print(19);
             return;
             List<int> l = new List<int> { 5, 3, 7, 2, 8 };
             Console.WriteLine(l.FindAll(i => (i & 1) == 0).MyToString());
