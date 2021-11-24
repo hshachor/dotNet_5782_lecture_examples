@@ -35,6 +35,7 @@ namespace WPF_hello
         private void Cancel_Kdown(object o, EventArgs e) { }
         void btnMy_MouseMove(object sender, MouseEventArgs e)
         {
+
             Button btn = sender as Button;
             Size size = (btn.Parent as Grid).RenderSize;
             Thickness margin = btn.Margin;
