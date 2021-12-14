@@ -1,0 +1,59 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Globalization; //תוספת של מרחב שמות
+
+namespace solid45 //חשוב לשים לב באיזה מרחב שמות מדובר
+{
+
+    public class NotBooleanToVisibilityConverter : IValueConverter
+    {
+        public object Convert(
+          object value,
+          Type targetType,
+          object parameter,
+          CultureInfo culture)
+        {
+            bool boolValue = (bool)value;
+            if (boolValue)
+            {
+                return Visibility.Hidden;
+            }
+            else
+            {
+                return Visibility.Visible;
+            }
+        }
+
+        public object ConvertBack(
+          object value,
+          Type targetType,
+          object parameter,
+          CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+    }
+}
