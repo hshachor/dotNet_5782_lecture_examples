@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GradStatResource"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded"
+        >
     <Window.Resources>
         <LinearGradientBrush x:Key="myLinearGradientBrush">
             <GradientStop Color="Blue"
@@ -39,5 +40,6 @@
              Grid.Column="1"
              Background="{StaticResource myLinearGradientBrush}">
         </TextBox>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="33,57,0,0" Grid.Row="1" Click="Button_Click"/>
     </Grid>
 </Window>

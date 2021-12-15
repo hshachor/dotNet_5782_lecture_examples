@@ -39,7 +39,8 @@
     <StackPanel>
         <ListBox ItemsSource="{Binding}"
              ItemTemplate="{StaticResource MyDataTemplate}"
-             HorizontalContentAlignment="Stretch" />
+             HorizontalContentAlignment="Stretch" >
+            </ListBox>
         <Button Content="Add"
             Click="Button_Click" />
     </StackPanel>

@@ -10,7 +10,7 @@
         <TextBlock Text="Using ElementName   " />
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Color: " />
-            <TextBox Background="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Text}" />
+            <TextBox Background="{Binding RelativeSource={RelativeSource Mode=Self }, Path=Text}" />
         </StackPanel>
     </StackPanel>
 </Window>

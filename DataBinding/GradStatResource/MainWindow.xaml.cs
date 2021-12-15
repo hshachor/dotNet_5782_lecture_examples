@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Media;
 
 namespace GradStatResource
 {
@@ -10,6 +11,17 @@ namespace GradStatResource
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var a = Resources["myLinearGradientBrush"] as LinearGradientBrush;
+            a.GradientStops[0].Color = Colors.Black;
+
         }
     }
 }

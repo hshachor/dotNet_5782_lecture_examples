@@ -13,28 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace solid42
+namespace DataSource
 {
-    public class MyData
+    class Person
     {
-        public string User { get; set; }
-        public string Password { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string address { get; set; }
+        public Image picture { get; set; }
     }
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
-
-            MyData myData = new MyData()
-            {
-                User = "Arik",
-                Password = "123456"
-            };
-            //stackPanel.DataContext = myData;
         }
     }
 }
