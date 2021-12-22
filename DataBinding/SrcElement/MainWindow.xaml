@@ -6,12 +6,11 @@
         xmlns:local="clr-namespace:solid41"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <StackPanel>
+    <StackPanel Background="{Binding ElementName=textColor, Path=Text}">
         <TextBlock Text="Using ElementName   " />
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="Color: " />
-            <TextBox x:Name="textColor"
-            Background="{Binding ElementName=textColor, Path=Text}" />
+            <TextBox x:Name="textColor"/>
         </StackPanel>
     </StackPanel>
 </Window>

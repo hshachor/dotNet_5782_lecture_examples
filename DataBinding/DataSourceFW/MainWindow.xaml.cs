@@ -13,12 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace solid42
+namespace DataSourceFW
 {
-    public class MyData
+    class Person
     {
-        public string User { get; set; }
-        public string Password { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string address { get; set; }
+        public Image picture { get; set; }
     }
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -28,13 +30,14 @@ namespace solid42
         public MainWindow()
         {
             InitializeComponent();
+        }
 
-            MyData myData = new MyData()
-            {
-                User = "Arik",
-                Password = "123456"
-            };
-            //stackPanel.DataContext = myData;
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            System.Windows.Data.CollectionViewSource personViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("personViewSource")));
+            // Load data by setting the CollectionViewSource.Source property:
+            // personViewSource.Source = [generic data source]
         }
     }
 }
