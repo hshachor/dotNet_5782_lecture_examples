@@ -1,0 +1,36 @@
+﻿<Window x:Class="Grouping.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Grouping"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <ComboBox Name="group" SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="No Group"/>
+            <ComboBoxItem Content="By Grade"/>
+            <ComboBoxItem Content="By Name"/>
+        </ComboBox>
+        <ListView Name="lview" ItemsSource="{Binding}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" Width="120" DisplayMemberBinding="{Binding Id}" />
+                    <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Grade" Width="50" DisplayMemberBinding="{Binding Grade}" />
+                </GridView>
+            </ListView.View>
+
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <TextBlock FontWeight="Bold" FontSize="14" Text="{Binding Name}"/>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListView.GroupStyle>
+
+        </ListView>
+    </StackPanel>
+</Window>
