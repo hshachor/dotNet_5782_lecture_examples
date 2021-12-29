@@ -18,7 +18,7 @@
         <StackPanel Orientation="Horizontal">
             <Button Content="Deposit" Name="btnDeposit" Click="btnDeposit_Click"/>
             <Button Content="Withdraw" Name="btnWithdraw"/>
-            <Button Content="Exit" Name="btnExit"/>
+            <Button Content="Exit" Name="btnExit" Click="btnExit_Click"/>
         </StackPanel>
 
 

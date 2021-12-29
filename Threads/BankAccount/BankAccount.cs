@@ -23,7 +23,7 @@ namespace Threads
         /// <param name="rate"> periodically rate </param>
         public BankAccount(float rate = 0.01f)
         {
-            Balance = 0;
+            Balance = 1;
             this.rate = rate;
         }
         /// <summary>
